@@ -56,33 +56,33 @@ export default function Landing() {
           />
           <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0A0D18]/80 via-transparent to-background" />
           <div className="container relative z-10 py-20">
-            <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center max-w-4xl mx-auto px-4">
               {/* Heading */}
-              <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-4 animate-fade-up text-white drop-shadow-2xl">
+              <h1 className="font-serif text-[4.5rem] leading-none sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 animate-fade-up text-white drop-shadow-2xl">
                 Math <span className="text-[#E2B714]">Go</span>
               </h1>
               
               {/* Description */}
-              <p className="text-2xl md:text-3xl text-white/90 font-medium mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              <p className="text-xl md:text-3xl text-white/90 font-medium mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
                 Math is easy with Math Go
               </p>
               
-              <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-12 animate-fade-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+              <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mb-12 animate-fade-up leading-relaxed px-2" style={{ animationDelay: '0.2s' }}>
                 Matematikani zamonaviy, qiziqarli va professional darajada o'rganing. 
                 Minglab savollar, tez natijalar, va interaktiv kosmik tajriba.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-                <Link to="/register">
-                  <Button variant="premium" size="xl" className="group">
+              <div className="flex flex-col w-full sm:w-auto sm:flex-row gap-4 animate-fade-up px-4" style={{ animationDelay: '0.3s' }}>
+                <Link to="/register" className="w-full sm:w-auto">
+                  <Button variant="premium" size="xl" className="group w-full sm:w-auto h-14 sm:h-12">
                     <Rocket className="h-5 w-5 mr-2 group-hover:animate-bounce" />
                     Bepul boshlash
                     <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Link to="/subjects">
-                  <Button variant="outline" size="xl" className="border-2 hover:bg-card/50 backdrop-blur-sm">
+                <Link to="/subjects" className="w-full sm:w-auto">
+                  <Button variant="outline" size="xl" className="w-full sm:w-auto h-14 sm:h-12 border-2 hover:bg-card/50 backdrop-blur-sm text-white border-white/20 hover:text-white">
                     Fanlarni ko'rish
                   </Button>
                 </Link>

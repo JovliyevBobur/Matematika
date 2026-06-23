@@ -13,7 +13,7 @@ export function Layout({ children }: LayoutProps) {
     <div className="min-h-screen bg-background relative flex flex-col">
       <FloatingShapes className="fixed z-0" />
       <Header />
-      <main className="relative z-10 flex-1 pb-28 md:pb-0">{children}</main>
+      <main className="relative z-10 flex-1 pb-24 md:pb-0">{children}</main>
       <AlKhorazmiyChat />
       <BottomNav />
     </div>

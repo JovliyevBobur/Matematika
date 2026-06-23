@@ -143,10 +143,10 @@ export function AlKhorazmiyChat() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-2xl transition-all duration-500 ease-out',
+          'fixed z-50 flex items-center justify-center rounded-full shadow-2xl transition-all duration-500 ease-out',
           isOpen
-            ? 'h-14 w-14 bg-gradient-to-br from-red-500 to-red-600 rotate-0 hover:from-red-600 hover:to-red-700'
-            : 'h-16 w-16 bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 hover:scale-110 chat-fab-pulse'
+            ? 'bottom-24 md:bottom-6 right-4 md:right-6 h-14 w-14 bg-gradient-to-br from-red-500 to-red-600 rotate-0 hover:from-red-600 hover:to-red-700'
+            : 'bottom-24 md:bottom-6 right-4 md:right-6 h-14 w-14 sm:h-16 sm:w-16 bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 hover:scale-110 chat-fab-pulse'
         )}
         aria-label={isOpen ? 'Chatni yopish' : 'Al-Xorazmiy bilan suhbatlashish'}
       >
@@ -160,10 +160,10 @@ export function AlKhorazmiyChat() {
       {/* Chat Window */}
       <div
         className={cn(
-          'fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl shadow-2xl border border-border/60 overflow-hidden transition-all duration-500 ease-out origin-bottom-right',
+          'fixed z-50 flex flex-col rounded-2xl shadow-2xl border border-border/60 overflow-hidden transition-all duration-500 ease-out origin-bottom-right',
           isOpen
-            ? 'w-[380px] h-[520px] opacity-100 scale-100 translate-y-0'
-            : 'w-[380px] h-[520px] opacity-0 scale-75 translate-y-8 pointer-events-none'
+            ? 'bottom-[160px] md:bottom-24 right-4 md:right-6 w-[360px] sm:w-[380px] h-[500px] sm:h-[520px] opacity-100 scale-100 translate-y-0'
+            : 'bottom-[160px] md:bottom-24 right-4 md:right-6 w-[360px] sm:w-[380px] h-[500px] sm:h-[520px] opacity-0 scale-75 translate-y-8 pointer-events-none'
         )}
         style={{
           maxHeight: 'calc(100vh - 140px)',
