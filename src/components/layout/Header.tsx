@@ -60,10 +60,10 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoImg} alt="MockTest Logo" className="h-11 w-11 rounded-md shadow-md transition-transform duration-300 group-hover:scale-105" />
+          <img src={logoImg} alt="Math Go Logo" className="h-11 w-11 rounded-md shadow-md transition-transform duration-300 group-hover:scale-105" />
           <div className="flex flex-col">
-            <span className="font-serif text-xl font-semibold tracking-tight text-foreground">MockTest</span>
-            <span className="text-[10px] tracking-elegant text-accent font-medium uppercase">Professional</span>
+            <span className="font-serif text-xl font-semibold tracking-tight text-foreground">Math Go</span>
+            <span className="text-[10px] tracking-elegant text-accent font-medium uppercase">Math is easy</span>
           </div>
         </Link>
 

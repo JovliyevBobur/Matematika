@@ -7,6 +7,7 @@ import { CheckCircle, BookOpen, Trophy, Clock, Users, TrendingUp, Rocket, ArrowR
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import logoImg from '@/assets/logo.png';
+import mathGoBg from '@/assets/math_go_bg.png';
 
 export default function Landing() {
   const { data: stats } = useQuery({
@@ -48,26 +49,31 @@ export default function Landing() {
       
       <PageTransition>
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-          <div className="container relative py-20">
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0A0D18]">
+          <div 
+            className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-screen"
+            style={{ backgroundImage: `url(${mathGoBg})` }}
+          />
+          <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0A0D18]/80 via-transparent to-background" />
+          <div className="container relative z-10 py-20">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Heading */}
-              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 animate-fade-up">
-                Imtihonlarga 
-                <span className="block mt-2">
-                  <span className="text-gradient-gold">professional</span>
-                </span>
-                darajada tayyorlaning
+              <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-4 animate-fade-up text-white drop-shadow-2xl">
+                Math <span className="text-[#E2B714]">Go</span>
               </h1>
               
               {/* Description */}
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 animate-fade-up leading-relaxed" style={{ animationDelay: '0.1s' }}>
-                MockTest Pro bilan real imtihon sharoitida o'zingizni sinab ko'ring. 
-                Minglab savollar, tez natijalar, va kosmik tajriba.
+              <p className="text-2xl md:text-3xl text-white/90 font-medium mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+                Math is easy with Math Go
+              </p>
+              
+              <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-12 animate-fade-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+                Matematikani zamonaviy, qiziqarli va professional darajada o'rganing. 
+                Minglab savollar, tez natijalar, va interaktiv kosmik tajriba.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
                 <Link to="/register">
                   <Button variant="premium" size="xl" className="group">
                     <Rocket className="h-5 w-5 mr-2 group-hover:animate-bounce" />
@@ -83,15 +89,15 @@ export default function Landing() {
               </div>
 
               {/* Stats - Only two cards like in reference image */}
-              <div className="flex flex-wrap justify-center gap-6 mt-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-                <div className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/60">
+              <div className="flex flex-wrap justify-center gap-6 mt-16 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+                <div className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-white">
                   <Users className="h-7 w-7 text-accent" />
                   <div className="text-left">
                     <p className="font-serif text-2xl font-bold">{stats?.users?.toLocaleString() ?? '0'}</p>
                     <p className="text-sm text-muted-foreground">foydalanuvchi</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/60">
+                <div className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-white">
                   <BookOpen className="h-7 w-7 text-accent" />
                   <div className="text-left">
                     <p className="font-serif text-2xl font-bold">{stats?.questions?.toLocaleString() ?? '0'}</p>
@@ -109,7 +115,7 @@ export default function Landing() {
             <div className="text-center mb-16">
               <p className="text-sm font-medium tracking-widest text-accent uppercase mb-3 animate-fade-up">Imkoniyatlar</p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 animate-fade-up delay-100">
-                Nima uchun <span className="text-gradient-gold">MockTest Pro</span>?
+                Nima uchun <span className="text-gradient-gold">Math Go</span>?
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-up delay-200">
                 Eng zamonaviy texnologiyalar bilan qurilgan platforma sizga eng yaxshi natijalarni kafolatlaydi
@@ -165,11 +171,11 @@ export default function Landing() {
         <footer className="py-12 border-t bg-card/50 backdrop-blur-sm">
           <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3 font-serif text-xl font-bold">
-              <img src={logoImg} alt="MockTest Logo" className="h-10 w-10 rounded-xl" />
-              <span>MockTest Pro</span>
+              <img src={logoImg} alt="Math Go Logo" className="h-10 w-10 rounded-xl" />
+              <span>Math Go</span>
             </div>
             <p className="text-muted-foreground">
-              © 2025 MockTest Pro. Barcha huquqlar himoyalangan.
+              © 2025 Math Go. Barcha huquqlar himoyalangan.
             </p>
           </div>
         </footer>
