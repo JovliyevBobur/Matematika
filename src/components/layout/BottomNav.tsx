@@ -16,7 +16,7 @@ export function BottomNav() {
   ];
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#EFECE6]/85 dark:bg-[#0B1021]/85 backdrop-blur-2xl border-t border-white/40 dark:border-white/5 z-50 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.06)] transition-all duration-500">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#04061E] border-t border-white/10 z-50 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-all duration-500">
       <div className="flex items-center justify-around px-2 py-1.5 relative">
         {navItems.map((item) => (
           <NavLink
@@ -26,8 +26,8 @@ export function BottomNav() {
               cn(
                 "flex flex-col items-center justify-center gap-1 w-14 h-14 rounded-2xl transition-all duration-500 relative group",
                 isActive 
-                  ? "text-[#1B2559] dark:text-[#E2B714]" 
-                  : "text-muted-foreground/80 hover:text-[#1B2559] dark:hover:text-[#E2B714]/80"
+                  ? "text-white" 
+                  : "text-white/60 hover:text-white"
               )
             }
           >
@@ -35,7 +35,7 @@ export function BottomNav() {
               <>
                 {/* Animated active background pill */}
                 <div className={cn(
-                  "absolute inset-0 m-auto w-11 h-11 rounded-xl bg-black/5 dark:bg-[#E2B714]/15 transition-all duration-500 ease-out",
+                  "absolute inset-0 m-auto w-11 h-11 rounded-xl bg-white/10 transition-all duration-500 ease-out",
                   isActive ? "scale-100 opacity-100" : "scale-50 opacity-0"
                 )} />
                 
@@ -58,7 +58,7 @@ export function BottomNav() {
                   
                   {/* Tiny glowing dot for active state (optional, adds premium feel) */}
                   <div className={cn(
-                    "absolute -bottom-1 w-1 h-1 rounded-full bg-[#1B2559] dark:bg-[#E2B714] transition-all duration-500",
+                    "absolute -bottom-1 w-1 h-1 rounded-full bg-white transition-all duration-500",
                     isActive ? "scale-100 opacity-100" : "scale-0 opacity-0"
                   )} />
                 </div>
