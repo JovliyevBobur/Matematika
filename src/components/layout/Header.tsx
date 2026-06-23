@@ -14,6 +14,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { useState } from 'react';
 import logoImg from '@/assets/logo.png';
+import { cn } from '@/lib/utils';
 export function Header() {
   const { user, profile, isAdmin, signOut } = useAuth();
   const navigate = useNavigate();
